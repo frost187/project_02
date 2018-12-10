@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <title>Al's Breakfast | Mug</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700" rel="stylesheet">
+    <style>
+
+        .container {
+            width: 1180px;
+            height: 1000px;
+        }
+
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        a:link {
+            color: #445F88;
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: #445F88;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: black;
+            text-decoration: none;
+        }
+
+        body {
+            background-color: #f1f1f1;
+            width: 1200px;
+            height: 800px;
+        }
+
+        header {
+            width: 1180px;
+            height: 120px;
+            font-family: "Open Sans Condensed", "Open Sans", sans-serif;
+            font-weight: bold;
+            font-size: 36px;
+            text-align: center;
+            background-color: #f1f1f1;
+            color: #445F88;
+            display: flex;
+            align-items: center;
+        }
+
+        .mug {
+            width: 560px;
+            height: 520px;
+            font-family: "Open Sans Condensed", "Open Sans", sans-serif;
+            font-size: 24px;
+            color: black;
+            background-color: #C4C4C4;
+            text-align: center;
+            display: inline-block;
+            margin-left: 590px;
+            position: absolute;
+        }
+
+        .image {
+            width: 510px;
+            height: 520px;
+            position: absolute;
+            padding-left: 30px;
+        }
+
+        .buttons {
+            width: 290px;
+            height: 44px;
+            float: left;
+        }
+
+        .button_logo {
+            float: left;
+        }
+
+        footer {
+            width: 1180px;
+            height: 80px;
+            background-color: #445F88;
+            position: absolute;
+            bottom: 0;
+            font-family: "Open Sans Condensed", "Open Sans", sans-serif;
+            text-align: center;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            color: white;
+
+        }
+
+        .logo_footer {
+            float: left;
+        }
+
+        .footer {
+            width: 490px;
+            height: 50px;
+            float: left;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropbtn {
+            background-color: #445F88;
+            color: white;
+            padding: 6px;
+            font-size: 24px;
+            border: none;
+            font-family: "Open Sans Condensed", "Open Sans", sans-serif;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 80px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .show {
+            display: block;
+        }
+
+        button {
+            background-color: #445F88;
+            color: white;
+            padding: 6px;
+            font-size: 24px;
+            border: none;
+            font-family: "Open Sans Condensed", "Open Sans", sans-serif;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div><!-- top navigation -->
+        <header>
+            <div class="buttons">
+                <a href="about.html">ABOUT</a>
+            </div>
+            <div class="buttons">
+                <a href="menu.html">MENU</a>
+            </div>
+            <div class="button_logo">
+                <a href="index.html"><img src="logo.png" style="height:104px; width:136px;" alt="Al's Breakfast"/></a>
+            </div>
+            <div class="buttons">
+                <a href="store.html">STORE</a>
+            </div>
+            <div class="buttons">
+                <a href="contact.html">CONTACT</a>
+            </div>
+        </header>
+    </div><!-- end of top navigation -->
+    <div class="image">
+        <a href="store.html"><img src="als_mug.png" style="position: absolute;" alt="Al's Breakfast Coffee Mug"/></a>
+    </div>
+    <div class="mug">
+        <h1 style="font-weight: bold;">COFFEE MUG</h1>
+        <br><br>
+        <p>
+            A 15oz mug and saucer combination adorned with the Al's logo.<br>
+            Perfect for holding a fine cup of the Al's blend coffee, or whatever<br>
+            you see fit. Price: $10.00.
+        </p>
+        <br>
+        <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">Quantity</button>
+            <div id="myDropdown" class="dropdown-content">
+                <p>1</p>
+                <p>2</p>
+                <p>3</p>
+            </div>
+        </div>
+        <br><br><br><br>
+        <button>Add To Cart</button>
+    </div>
+
+    <div><!-- footer -->
+        <footer>
+            <div class="logo_footer">
+                <div class="footer">
+                    413 14TH STREET SE <br>
+                    MINNEAPOLIS, MN
+                </div>
+                <div class="logo_footer">
+                    <a href="index.html"><img src="footer_images/logo_foot.png" style="width:193px; height:43px;"
+                                              alt="Al's Breakfast"/></a>
+                </div>
+                <div class="footer">
+                    MON-SAT 6-1 | SUN 9-1 <br>
+                    (612)-331-9991
+                </div>
+            </div>
+        </footer>
+    </div><!-- end of footer -->
+
+</div>
+
+</body>
+<script>
+    /* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+    function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    // Close the dropdown menu if the user clicks outside of it
+    window.onclick = function (event) {
+        if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
+            }
+        }
+    }
+</script>
+</html>
